@@ -1,0 +1,58 @@
+---
+# Front matter for main sass file, Jekyll wont read it without this header;
+---
+
+@import 'variables';
+
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+@import 'trajanusBricks';
+
+
+html {
+  background-color: $color-back-dark;
+}
+
+body {
+  font-family: Inconsolata, sans-serif;
+  color: $color-font-light;
+}
+
+main {
+
+  h1, h2, h3, h4 {
+    margin-top: 40px;
+    margin-bottom: 12px;
+    border-left: 2px solid #2ecc71;
+    padding-left: 8px;
+  }
+
+  h1:nth-of-type(3n+1) {
+    /* color: #7090A2; */
+    color: $color-font-purple;
+  }
+
+  h1:nth-of-type(3n+2) {
+    /* color: #494D7A; */
+    color: $color-font-green;
+  }
+
+  h1:nth-of-type(3n+3) {
+    /* color: #897265; */
+    color: $color-font-red;
+  }
+
+  a,
+  a:visited {
+    text-decoration: none;
+    color: $color-font-link;
+  }
+
+  a:hover,
+  a:active {
+    text-decoration: underline;
+
+  }
+}
+
+
+@import 'header', 'nav', 'content', 'footer';

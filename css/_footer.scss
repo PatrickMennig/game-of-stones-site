@@ -1,0 +1,19 @@
+@import 'variables';
+
+
+footer {
+
+  margin: 50px auto 40px;
+
+  a,
+  a:visited {
+    color: $color-font-link;
+    float: right;
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:active {
+    text-decoration: underline;
+  }
+}

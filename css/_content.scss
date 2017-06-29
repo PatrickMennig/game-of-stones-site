@@ -1,0 +1,42 @@
+@import 'include-media';
+
+@include media ('<=phone') {
+  .content {
+    margin: auto 2%;
+    width: 96%;
+  }
+};
+
+@include media ('>phone', '<tablet') {
+  .content {
+    margin: auto 2%;
+    width: 96%;
+  }
+};
+
+@include media ('>=tablet', '<desktop') {
+  .content {
+    margin: auto 5%;
+    width: 90%;
+  }
+};
+
+@include media ('>=desktop', '<desktop-large') {
+  .content {
+    margin: auto;
+    width: 1024px;
+  }
+};
+
+
+@include media ('>=desktop-large') {
+  .content {
+    margin: auto;
+    width: 1280px;
+  }
+};
+
+.content {
+  box-sizing: border-box;
+  padding: 12px 16px;
+}

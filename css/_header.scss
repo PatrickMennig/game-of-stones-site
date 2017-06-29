@@ -1,0 +1,78 @@
+@import 'include-media';
+@import 'variables';
+
+
+header {
+
+  @include media ('<=phone') {
+    .banner {
+      height: 100px;
+    }
+  };
+
+  @include media ('>phone', '<tablet') {
+    .banner {
+      height: 300px;
+    }
+  };
+
+  @include media ('>=tablet', '<desktop') {
+    .banner {
+      height: 300px;
+    }
+  };
+
+  @include media ('>=desktop', '<desktop-large') {
+    .banner {
+      height: 400px;
+    }
+  };
+
+
+  @include media ('>=desktop-large') {
+    .banner {
+      height: 600px;
+    }
+  };
+
+  .banner {
+    background: url('/assets/images/smoke-fullhd.jpg') center center no-repeat;
+    background-size: cover;
+
+    position: relative;
+
+    text-align: center;
+
+    width: 100%;
+
+    @include media ('<=phone') {
+      h3 {
+        font-size: $font-size-large;
+      }
+    };
+
+    @include media ('>phone', '<tablet') {
+      h3 {
+        font-size: $font-size-large;
+      }
+    };
+
+    @include media ('>tablet') {
+      h3 {
+        font-size: $font-size-x-large;
+      }
+    };
+
+    @include media ('>=desktop-large') {
+      h3 {
+        font-size: $font-size-xx-large;
+      }
+    };
+
+    h3 {
+      font-family: TrajanusBricks, serif;
+      position: relative;
+      top: 40%;
+    }
+  }
+}

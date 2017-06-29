@@ -1,0 +1,54 @@
+@import 'include-media';
+@import 'variables';
+
+nav {
+
+  ul {
+
+    text-align: right;
+
+    li {
+
+      display: inline-block;
+      margin: auto 10px;
+
+      @include media ('<=phone') {
+        a {
+          font-size: $font-size-medium;
+        }
+      };
+
+      @include media ('>phone', '<tablet') {
+        a {
+          font-size: $font-size-medium;
+        }
+      };
+
+      @include media ('>=tablet') {
+        a {
+          font-size: $font-size-large;
+        }
+      };
+
+      a,
+      a:visited {
+        color: $color-font-light;
+        text-decoration: none;
+      }
+      
+      a:hover,
+      a:active {
+        text-decoration: underline;
+      }
+
+      a.active {
+        border-bottom: 1px solid $color-font-link;
+      }
+    }
+
+    li:last-child {
+      margin-right: 0;
+    }
+  }
+
+}
